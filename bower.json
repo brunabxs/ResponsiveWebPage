@@ -1,0 +1,21 @@
+{
+  "name": "responsive-web-page",
+  "authors": [
+    "Bruna Xavier <brunabxsantos@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^5.0.0",
+    "jquery-ui": "^1.12.1"
+  }
+}
