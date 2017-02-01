@@ -1,0 +1,366 @@
+$mainTextColor: rgb(50, 50, 50);
+$secTextColor: rgba(50, 50, 50, 0.55);
+$activeBgColor: rgb(39, 110, 164);
+$activeColor: #FFFFFF;
+$facebookBgColor: #3B5998;
+$googleplusBgColor: #DD4B39;
+$negativeBgColor: rgb(231, 74, 86);
+$darkShadowColor: rgba(0, 0, 0, 0.2);
+
+$fontSize: 16px;
+$buttonIconSize: 12px;
+$titleIconSize: 20px;
+$mainLogoSize: 24px;
+$smallLogoSize: 60px;
+
+@mixin border-radius($values) {
+    -webkit-border-radius: $values;
+	   -moz-border-radius: $values;
+			border-radius: $values;
+}
+
+@mixin box-shadow($values) {
+    -webkit-box-shadow: $values;
+	   -moz-box-shadow: $values;
+			box-shadow: $values;
+}
+
+@mixin cursor-hand() {
+    cursor: pointer;
+    cursor: hand;
+}
+
+@mixin mask() {
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+
+@mixin mask-image($value) {
+    -webkit-mask-image: $value;
+    mask-image: $value;
+}
+
+@mixin logo($size) {
+    width: $size;
+    height: $size;
+    @include border-radius(5px);
+    @include box-shadow(1px 1px 10px $darkShadowColor);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-size: $fontSize;
+    color: $mainTextColor;
+}
+
+a {
+    color: $mainTextColor;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.lm-button {
+    @extend a;
+    @extend button;
+    @include cursor-hand();
+    @include border-radius(5px);
+    padding: 15px;
+
+    &.active {
+        color: $activeColor;
+        background-color: $activeBgColor;
+        text-transform: uppercase;
+        
+        &:hover, &:active, &:visited {
+            color: $activeColor;
+        }
+
+        .lm-icon {
+            background-color: $activeColor;
+        }
+    }
+
+    &.facebook {
+        color: $activeColor;
+        background-color: $facebookBgColor;
+
+        &:hover, &:active, &:visited {
+            color: $activeColor;
+        }
+
+        .lm-icon {
+            background-color: $activeColor;
+            vertical-align: middle;
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    &.googleplus {
+        color: $activeColor;
+        background-color: $googleplusBgColor;
+
+        &:hover, &:active, &:visited {
+            color: $activeColor;
+        }
+
+        .lm-icon {
+            background-color: $activeColor;
+            vertical-align: middle;
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .lm-icon {
+        width: $buttonIconSize;
+        height: $buttonIconSize;
+    }
+}
+
+.lm-icon {
+    display: inline-block;
+    margin-right: 10px;
+    @include mask();
+
+    &.add {
+        @include mask-image(url('../assets/_icons/add.svg'));
+    }
+
+    &.unlock {
+        @include mask-image(url('../assets/_icons/unlock.svg'));
+    }
+
+    &.facebook {
+        @include mask-image(url('../assets/_icons/linkedin.svg'));
+    }
+
+    &.googleplus {
+        @include mask-image(url('../assets/_icons/gplus.svg'));
+    }
+}
+
+.lm-company-info {
+    text-align: center;
+    margin: 30px 0px;
+
+    .lm-company-name {
+        margin: 20px 0;
+    }
+
+    .lm-company-logo {
+        @include logo($smallLogoSize);
+    }
+}
+
+.lm-menu {
+    position: relative;
+    text-align: center;
+    @include box-shadow(1px 1px 10px $darkShadowColor);
+
+    .lm-menuitem {
+        display: inline-block;
+        padding: 15px 25px;
+        text-decoration: none;
+        color: $secTextColor;
+        font-weight: bold;
+
+        &:hover, &:active, &:visited {
+            color: $secTextColor;
+        }
+
+        &.selected {
+            border-bottom: 3px solid #1FB3AA;
+            color: $mainTextColor;
+
+            &:hover, &:active, &:visited {
+                color: $mainTextColor;
+            }
+        }
+
+        span {
+            display: block;
+        }
+    }
+}
+
+.lm-content {
+    background-color: #ddd;
+    padding: 20px;
+
+    .lm-card {
+        padding: 20px 15px;
+        background: #FFFFFF;
+        @include border-radius(5px);
+        @include box-shadow(1px 1px 10px $darkShadowColor);
+
+        .lm-main-title {
+            color: $mainTextColor;
+        }
+
+        .lm-sec-title {
+            color: $secTextColor;
+        }
+
+        .lm-advertisement {
+            background-color: #eee;
+            margin: 0px -15px;
+            padding: 20px 15px;
+        }
+    }
+}
+
+.lm-line {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: $secTextColor;
+    border-bottom: 2px solid #eee;
+    font-weight: normal;
+
+    &.header {
+        text-align: right;
+        padding-bottom: 10px;
+    }
+
+    &.last {
+        border-bottom: none;
+    }
+
+    .lm-info {
+        display: inline-block;
+
+        .lm-main-title {
+            color: $activeBgColor;
+            font-weight: normal;
+        }
+
+        .lm-sec-title {
+            font-weight: normal;
+        }
+    }
+
+    .lm-info-value {
+        float: right;
+        color: $mainTextColor;
+    }
+}
+
+#lm-main-header {
+    background-color: #236EAE;
+    color: #FFFFFF;
+    padding: 10px 0px 10px 50px;
+}
+
+#lm-main-logo {
+    height: $mainLogoSize;
+}
+
+#lm-access {
+    #ls-access-main-title {
+        .lm-icon {
+            background-color: $mainTextColor;
+            width: $titleIconSize;
+            height: $titleIconSize;
+        }
+    }
+
+    .lm-access-modal-divisor {
+        margin: 30px 40px 40px 40px;
+        height: 3px;
+        background-color: #ccc;
+    }
+}
+
+#lm-access-modal {
+    margin: 20px 0px;
+
+    .lm-access-modal-content {
+        @include box-shadow(2px 2px 5px rgba(0, 0, 0, 0.1));
+        @include border-radius(0px 0px 3px 3px);
+        position: relative;
+        z-index: 10;
+        background-color: $activeColor;
+        padding: 20px;
+    }
+
+    .lm-access-modal-or {
+        position: relative;
+        margin: 20px 0px;
+        padding-left: 210px;
+        font-size: 20px;
+        color: $secTextColor;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 12px;
+            border-bottom: 3px solid #ccc;
+        }
+
+        &:before {
+            left: 0px;
+        }
+
+        &:after {
+            left: 238px;
+        }
+    }
+
+    .lm-access-modal-other {
+        font-size: 20px;
+        color: $mainTextColor;
+        font-weight: normal;
+
+        a {
+            color: $activeBgColor;
+            font-weight: normal;
+
+            &:hover, &:visited, &:active {
+                color: $activeBgColor;
+            }
+        }
+    }
+    
+    .ui-tabs-nav { 
+        li {
+            list-style: none;
+            display: inline-block;
+            @include border-radius(3px 3px 0px 0px);
+        }
+
+        .ui-state-default {
+            padding: 10px 15px;
+            background-color: #ccc;
+            color: $activeBgColor;
+            text-transform: uppercase;
+
+            a {
+                color: $activeBgColor;
+
+                &:hover, &:visited, &:active {
+                    color: $activeBgColor;
+                }
+            }
+        }
+
+        .ui-state-active {
+            @include box-shadow(2px 2px 5px rgba(0, 0, 0, 0.1));
+            background-color: $activeColor;
+        }
+    }
+}

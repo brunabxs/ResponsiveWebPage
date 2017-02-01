@@ -1,10 +1,109 @@
 <!DOCTYPE html>
 <html>
 <title>Responsive web page</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="language" content="pt_BR">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="language" content="pt_BR" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic" rel="stylesheet" type="text/css" />
+<link href="../bower_components/normalize-css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="stylesheets/main.css" rel="stylesheet" type="text/css" />
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="scripts/main.js"></script>
 
-<body></body>
+<body>
+    <header id="lm-main-header">
+        <img id="lm-main-logo" src="assets/logo/lovemondays-logotype.svg" title="Love Mondays" />
+    </header>
+
+    <section class="lm-company-info">
+        <img class="lm-company-logo" />
+        <h2 class="lm-company-name">International Business Machines (IBM)</h2>
+        <button class="lm-button active"><div class="lm-icon add"></div>Postar avaliação</button>
+    </section>
+    
+    <nav class="lm-menu">
+        <a href="#" class="lm-menuitem">Avaliações <span>(110)</span></a>
+        <a href="#" class="lm-menuitem selected">Salários <span>(110)</span></a>
+        <a href="#" class="lm-menuitem">Outros <span>(110)</span></a>
+    </nav>
+
+    <section class="lm-content">
+        <section class="lm-card">
+            <header>
+                <h3 class="lm-main-title">Salários IBM</h3>
+                <h4 class="lm-sec-title">3499 salários para 214 cargos</h4>
+                <button />
+                <button />
+            </header>
+
+            <h3 class="lm-line header">Média salarial</h3>
+            <div class="lm-line">
+                <div class="lm-info">
+                    <h3 class="lm-main-title">Analista contábil</h3>
+                    <h4 class="lm-sec-title">22 salários</h4>
+                </div>
+                <div class="lm-info-value">R$ 10.475</div>
+            </div>
+            <div class="lm-line">
+                <div class="lm-info">
+                    <h3 class="lm-main-title">Analista de desenvolvimento sênior</h3>
+                    <h4 class="lm-sec-title">22 salários</h4>
+                </div>
+                <div class="lm-info-value">R$ 10.475</div>
+            </div>
+            <div class="lm-line last">
+                <div class="lm-info">
+                    <h3 class="lm-main-title">Analista de desenvolvimento sênior</h3>
+                    <h4 class="lm-sec-title">22 salários</h4>
+                </div>
+                <div class="lm-info-value">R$ 10.475</div>
+            </div>
+
+            <section id="lm-access" class="lm-advertisement">
+                <h3 id="ls-access-main-title"><div class="lm-icon unlock"></div>Acesse todo o conteúdo gratuitamente</h3>
+                <section id="lm-access-modal" class="lm-access-modal">
+                    <ul class="lm-access-modal-tabs">
+                        <li><a href="#tabs-1">Criar conta</a></li>
+                        <li><a href="#tabs-2">Já possui conta?</a></li>
+                    </ul>
+                    <div id="tabs-1" class="lm-access-modal-content">
+                        Hello!
+                    </div>
+                    <div id="tabs-2" class="lm-access-modal-content">
+                        <button class="lm-button facebook"><div class="lm-icon facebook"></div>Facebook</button>
+                        <button class="lm-button googleplus"><div class="lm-icon googleplus"></div>Google +</button>
+                        <p class="lm-access-modal-or">ou</p>
+                        <p class="lm-access-modal-other">Entrar <a href="#">utilizando seu email</a></p>
+                    </div>
+                </section>
+                <div class="lm-access-modal-divisor"></div>
+                <h3>Junte-se à 456.678 pessoas que já postaram avaliações e salários na Love Mondays</h3>
+            </section>
+
+            <div class="lm-line">
+                <div class="lm-info">
+                    <h3 class="lm-main-title">Analista de desenvolvimento sênior</h3>
+                    <h4 class="lm-sec-title">22 salários</h4>
+                </div>
+                <div class="lm-info-value">R$ 10.475</div>
+            </div>
+            <div class="lm-line">
+                <div class="lm-info">
+                    <h3 class="lm-main-title">Analista de desenvolvimento sênior</h3>
+                    <h4 class="lm-sec-title">22 salários</h4>
+                </div>
+                <div class="lm-info-value">R$ 10.475</div>
+            </div>
+            <div class="lm-line last">
+                <div class="lm-info">
+                    <h3 class="lm-main-title">Analista de desenvolvimento sênior</h3>
+                    <h4 class="lm-sec-title">22 salários</h4>
+                </div>
+                <div class="lm-info-value">R$ 10.475</div>
+            </div>
+        </section>
+    </section>
+</body>
 
 </html>
