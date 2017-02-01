@@ -23,7 +23,7 @@ bower install
 ```
 - Use gulp task ```sass``` to compile *.scss files.
 ```
-.\node\_modules\.bin\gulp sass
+.\node_modules\.bin\gulp sass
 ```
 Or you can install gulp globally:
 ```
