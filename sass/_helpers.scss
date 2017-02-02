@@ -6,6 +6,10 @@
     font-weight: bolder;
 }
 
+.center {
+    text-align: center;
+}
+
 .lm-icon {
     display: inline-block;
     @include mask();
@@ -15,6 +19,10 @@
     &.add {
         @include mask-image(url('../assets/_icons/add.svg'));
     }
+
+    &.unlock {
+        @include mask-image(url('../assets/_icons/unlock.svg'));
+    }
 }
 
 .lm-button {
@@ -23,6 +31,21 @@
     @include cursor-hand();
     @include border-radius(5px);
     padding: 15px;
+
+    &.no-text {
+        .lm-icon {
+            width: $buttonNoTextIconSize;
+            height: $buttonNoTextIconSize;
+        }
+    }
+
+    &:not(.no-text) {
+        .lm-icon {
+            width: $buttonIconSize;
+            height: $buttonIconSize;
+            margin-right: 15px;
+        }
+    }
 
     &.active {
         color: $activeTextColor;
@@ -38,10 +61,20 @@
         }
     }
 
-    .lm-icon {
-        width: $buttonIconSize;
-        height: $buttonIconSize;
-        margin-right: 15px;
+    &.active2 {
+        color: $activeBgColor;
+        background-color: $activeTextColor;
+        font-weight: bold;
+        text-transform: uppercase;
+        @include box-shadow(1px 1px 10px rgba(0, 0, 0, 0.2));
+
+        &:hover, &:active, &:visited {
+            color: $activeBgColor;
+        }
+
+        .lm-icon {
+            background-color: $activeBgColor;
+        }
     }
 }
 
@@ -101,5 +134,11 @@
             position: absolute;
             clear: both;
         }
+    }
+
+    .lm-line-result-count {
+        @extend h3;
+        color: $secTextColor;
+        margin-bottom: 20px;
     }
 }
