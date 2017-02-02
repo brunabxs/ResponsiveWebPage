@@ -41,6 +41,10 @@
         color: $secTextColor;
         font-weight: bold;
 
+        span {
+            display: block;
+        }
+
         &:hover, &:active, &:visited {
             color: $secTextColor;
         }
@@ -48,6 +52,7 @@
         &.selected {
             border-bottom: 3px solid #1FB3AA;
             color: $mainTextColor;
+            font-weight: bolder;
 
             &:hover, &:active, &:visited {
                 color: $mainTextColor;
