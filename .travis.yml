@@ -6,9 +6,10 @@ before_install:
 install:
   - npm install
   - bower install
+script: ""
 before_deploy:
   - gulp deploy
-  - rm ./deploy/assets
+  - rm -rf ./deploy/assets/
 deploy:
   on:
     branch: travis
