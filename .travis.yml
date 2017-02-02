@@ -16,6 +16,8 @@ before_deploy:
   - mkdir deploy/public/bower_components
   - mkdir deploy/public/bower_components/normalize-css & cp -rp ./bower_components/normalize-css/normalize.css ./deploy/public/bower_components/normalize-css/normalize.css
 deploy:
+  on:
+    branch: travis
   provider: s3
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
