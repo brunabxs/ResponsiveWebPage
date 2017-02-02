@@ -116,6 +116,12 @@
     @include border-radius(5px);
     @include box-shadow(1px 1px 10px rgba(0, 0, 0, 0.1));
 
+    @media screen and (min-width: 1200px) {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .lm-card-main-title {
         margin-bottom: 20px;
         color: $mainTextColor;
