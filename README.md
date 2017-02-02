@@ -21,16 +21,16 @@ npm install -g bower
 npm install
 bower install
 ```
-- Use gulp task ```sass``` to compile *.scss files.
+- Use gulp task ```deploy``` to generate the deploy structure.
 ```
-.\node_modules\.bin\gulp sass
+.\node_modules\.bin\gulp deploy
 ```
 Or you can install gulp globally:
 ```
 npm install -g gulp
-gulp sass
+gulp deploy
 ```
 
 ### Running the application
-- Open public/index.html.
+- Open deploy/index.html.
 
