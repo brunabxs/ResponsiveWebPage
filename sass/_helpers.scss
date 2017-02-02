@@ -166,7 +166,8 @@
 }
 
 .lm-access {
-    margin: 20px 0px;
+    width: 400px;
+    margin: 20px auto;
 
     .lm-access-tab-content {
         @include box-shadow(2px 2px 5px rgba(0, 0, 0, 0.1));
@@ -180,14 +181,14 @@
     .lm-access-or {
         position: relative;
         margin: 20px 0px;
-        padding-left: 210px;
+        padding-left: 170px;
         font-size: 20px;
         color: $secTextColor;
 
         &:before, &:after {
             content: '';
             position: absolute;
-            width: 200px;
+            width: 165px;
             height: 12px;
             border-bottom: 3px solid #ccc;
         }
@@ -197,7 +198,7 @@
         }
 
         &:after {
-            left: 238px;
+            left: 195px;
         }
     }
 
@@ -220,6 +221,8 @@
         li {
             list-style: none;
             display: inline-block;
+            width: 168px;
+            text-align: center;
             @include border-radius(3px 3px 0px 0px);
         }
 
