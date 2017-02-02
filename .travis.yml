@@ -9,9 +9,12 @@ install:
 script:
   - gulp sass
 before_deploy:
-  - cp -rp ./bower_components/normalize-css/normalize.css ./deploy/public/bower_components/normalize-css/normalize.css
-  - cp -rp ./public/stylesheets ./deploy/public/stylesheets
+  - mkdir deploy
+  - mkdir deploy/public
   - cp -rp ./public/index.html ./deploy/public/index.html
+  - cp -rp ./public/stylesheets ./deploy/public/stylesheets
+  - mkdir deploy/public/bower_components
+  - mkdir deploy/public/bower_components/normalize-css & cp -rp ./bower_components/normalize-css/normalize.css ./deploy/public/bower_components/normalize-css/normalize.css
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY
