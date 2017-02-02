@@ -2,6 +2,7 @@
 .bolder { font-weight: bolder; }
 .normal { font-weight: normal; }
 .center { text-align: center; }
+.right { float: right; }
 
 .lm-icon {
     display: inline-block;
@@ -15,6 +16,10 @@
 
     &.unlock {
         @include mask-image(url('../assets/_icons/unlock.svg'));
+    }
+
+    &.sort {
+        @include mask-image(url('../assets/_icons/reorder.svg'));
     }
 
     &.facebook {
@@ -32,8 +37,11 @@
     @include cursor-hand();
     @include border-radius(5px);
     padding: 15px;
+    vertical-align: top;
 
     &.no-text {
+        padding: 12px;
+
         .lm-icon {
             width: $buttonNoTextIconSize;
             height: $buttonNoTextIconSize;
@@ -109,6 +117,7 @@
     @include box-shadow(1px 1px 10px rgba(0, 0, 0, 0.1));
 
     .lm-card-main-title {
+        margin-bottom: 20px;
         color: $mainTextColor;
         font-weight: bolder;
 
