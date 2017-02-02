@@ -1,0 +1,21 @@
+language: node_js
+node_js: "node"
+before_install:
+  - npm install -g bower
+  - npm install -g gulp
+install:
+  - npm install
+  - bower install
+script:
+  - gulp sass
+before_deploy:
+  - cp -rp ./bower_components/normalize-css/normalize.css ./deploy/public/bower_components/normalize-css/normalize.css
+  - cp -rp ./public/stylesheets ./deploy/public/stylesheets
+  - cp -rp ./public/index.html ./deploy/public/index.html
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  bucket: "responsive-web-page"
+  skip_cleanup: true
+  local_dir: deploy
