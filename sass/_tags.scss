@@ -9,9 +9,9 @@ html {
     color: $mainTextColor;
 }
 
-h1 { font-size: 32px; font-weight: normal; }
-h2 { font-size: 22px; font-weight: normal; }
-h3 { font-size: 18px; font-weight: normal; }
+h1 { font-size: $mainFontSize; }
+h2 { font-size: $secFontSize; }
+h3 { font-size: $thirdFontSize; }
 
 a {
     text-decoration: none;
