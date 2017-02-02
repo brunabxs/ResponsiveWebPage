@@ -14,17 +14,44 @@
 
 #lm-company-info {
     text-align: center;
-    padding: 60px 0px;
+    padding-top: 60px;
+    margin-bottom: 30px;
     @include filter-gradient(#BBD3E6, #FFFFFF);
     @include linear-gradient(url('../assets/background/company-page-background@3x.png'), #BBD3E6, #E9F1F7, #FFFFFF);
     background-repeat: no-repeat;
     background-position: center top; 
 
     #lm-company-name {
-        margin: 20px 0;
+        margin: 30px 0;
     }
 
     #lm-company-logo {
         @include logo($companyLogoSize);
+    }
+}
+
+#lm-company-menu {
+    position: relative;
+    text-align: center;
+    @include box-shadow(1px 1px 10px rgba(0, 0,0, 0.2));
+
+    a {
+        display: inline-block;
+        padding: 15px 25px;
+        color: $secTextColor;
+        font-weight: bold;
+
+        &:hover, &:active, &:visited {
+            color: $secTextColor;
+        }
+
+        &.selected {
+            border-bottom: 3px solid #1FB3AA;
+            color: $mainTextColor;
+
+            &:hover, &:active, &:visited {
+                color: $mainTextColor;
+            }
+        }
     }
 }
