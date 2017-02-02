@@ -6,17 +6,9 @@ before_install:
 install:
   - npm install
   - bower install
-script:
-  - gulp sass
 before_deploy:
-  - mkdir deploy
-  - mkdir deploy/public
-  - cp -rp ./public/index.html ./deploy/public/index.html
-  - ls -la
-  - ls -la ./public
-  - cp -rp ./public/stylesheets/ ./deploy/public
-  - mkdir deploy/public/bower_components
-  - mkdir deploy/public/bower_components/normalize-css & cp -rp ./bower_components/normalize-css/normalize.css ./deploy/public/bower_components/normalize-css/normalize.css
+  - gulp deploy
+  - rm ./deploy/assets
 deploy:
   on:
     branch: travis
