@@ -1,14 +1,7 @@
-.bold {
-    font-weight: bold;
-}
-
-.bolder {
-    font-weight: bolder;
-}
-
-.center {
-    text-align: center;
-}
+.bold   { font-weight: bold; }
+.bolder { font-weight: bolder; }
+.normal { font-weight: normal; }
+.center { text-align: center; }
 
 .lm-icon {
     display: inline-block;
@@ -22,6 +15,14 @@
 
     &.unlock {
         @include mask-image(url('../assets/_icons/unlock.svg'));
+    }
+
+    &.facebook {
+        @include mask-image(url('../assets/_icons/linkedin.svg'));
+    }
+
+    &.googleplus {
+        @include mask-image(url('../assets/_icons/gplus.svg'));
     }
 }
 
@@ -76,6 +77,29 @@
             background-color: $activeBgColor;
         }
     }
+
+    &.facebook, &.googleplus {
+        color: $activeTextColor;
+
+        &:hover, &:active, &:visited {
+            color: $activeTextColor;
+        }
+
+        .lm-icon {
+            background-color: $activeTextColor;
+            vertical-align: middle;
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    &.facebook {
+        background-color: $facebookBgColor;
+    }
+
+    &.googleplus {
+        background-color: $googleplusBgColor;
+    }
 }
 
 .lm-card {
@@ -92,6 +116,123 @@
             display: block;
             color: $secTextColor;
             font-weight: normal;
+        }
+    }
+
+    .lm-advertisement {
+        background-color: #eee;
+        margin: 0px -15px;
+        padding: 20px 15px;
+
+        & + .lm-advertisement {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 35%;
+                background-color: #eee;
+                width: 30%;
+                height: 5px;
+                border-top: 3px solid #ccc; 
+            }
+        }
+
+        &.last {
+            padding-bottom: 60px;
+        }
+
+        .lm-advertisement-main-title {
+            @extend h3;
+
+            .lm-icon {
+                width: $thirdFontSize;
+                height: $thirdFontSize;
+                margin-right: 15px;
+                background-color: $mainTextColor;
+            }
+        }
+    }
+}
+
+.lm-access {
+    margin: 20px 0px;
+
+    .lm-access-tab-content {
+        @include box-shadow(2px 2px 5px rgba(0, 0, 0, 0.1));
+        @include border-radius(0px 0px 3px 3px);
+        position: relative;
+        z-index: 10;
+        background-color: $activeTextColor;
+        padding: 20px;
+    }
+
+    .lm-access-or {
+        position: relative;
+        margin: 20px 0px;
+        padding-left: 210px;
+        font-size: 20px;
+        color: $secTextColor;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 12px;
+            border-bottom: 3px solid #ccc;
+        }
+
+        &:before {
+            left: 0px;
+        }
+
+        &:after {
+            left: 238px;
+        }
+    }
+
+    .lm-access-other {
+        font-size: 20px;
+        color: $mainTextColor;
+        font-weight: normal;
+
+        a {
+            color: $activeBgColor;
+            font-weight: normal;
+
+            &:hover, &:visited, &:active {
+                color: $activeBgColor;
+            }
+        }
+    }
+    
+    .ui-tabs-nav { 
+        li {
+            list-style: none;
+            display: inline-block;
+            @include border-radius(3px 3px 0px 0px);
+        }
+
+        .ui-state-default {
+            padding: 10px 15px;
+            background-color: #ccc;
+            color: $activeBgColor;
+            text-transform: uppercase;
+            font-weight: bold;
+
+            a {
+                color: $activeBgColor;
+
+                &:hover, &:visited, &:active {
+                    color: $activeBgColor;
+                }
+            }
+        }
+
+        .ui-state-active {
+            @include box-shadow(2px 2px 5px rgba(0, 0, 0, 0.1));
+            background-color: $activeTextColor;
         }
     }
 }
