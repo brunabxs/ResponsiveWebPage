@@ -69,7 +69,7 @@
     border-bottom: 2px solid #eee;
 
     &.header {
-        @extend h2;
+        @extend h3;
         color: $secTextColor;
         text-align: right;
         padding-bottom: 10px;
@@ -85,8 +85,9 @@
         display: inline-block;
 
         .info {
-            display: block;
+            @extend h3;
             color: $secTextColor;
+            display: block;
         }
     }
 
@@ -94,5 +95,11 @@
         @extend h2;
         float: right;
         color: $mainTextColor;
+
+        &:after {
+            content: '';
+            position: absolute;
+            clear: both;
+        }
     }
 }
