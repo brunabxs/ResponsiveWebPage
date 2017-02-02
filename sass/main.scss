@@ -41,7 +41,7 @@
         color: $secTextColor;
         font-weight: bold;
 
-        span {
+        .info {
             display: block;
         }
 
@@ -59,4 +59,9 @@
             }
         }
     }
+}
+
+#lm-content {
+    background-color: #ddd;
+    padding: 20px;
 }

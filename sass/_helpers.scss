@@ -1,3 +1,11 @@
+.bold {
+    font-weight: bold;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
 .lm-icon {
     display: inline-block;
     @include mask();
@@ -34,5 +42,57 @@
         width: $buttonIconSize;
         height: $buttonIconSize;
         margin-right: 15px;
+    }
+}
+
+.lm-card {
+    padding: 20px 15px;
+    background: #FFFFFF;
+    @include border-radius(5px);
+    @include box-shadow(1px 1px 10px rgba(0, 0, 0, 0.1));
+
+    .lm-card-main-title {
+        color: $mainTextColor;
+        font-weight: bolder;
+
+        .info {
+            display: block;
+            color: $secTextColor;
+            font-weight: normal;
+        }
+    }
+}
+
+.lm-line {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+
+    &.header {
+        @extend h2;
+        color: $secTextColor;
+        text-align: right;
+        padding-bottom: 10px;
+    }
+
+    &.last {
+        border-bottom: none;
+    }
+
+    .lm-line-main-title {
+        @extend h2;
+        color: $activeBgColor;
+        display: inline-block;
+
+        .info {
+            display: block;
+            color: $secTextColor;
+        }
+    }
+
+    .lm-line-value {
+        @extend h2;
+        float: right;
+        color: $mainTextColor;
     }
 }
