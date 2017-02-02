@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'mixins';
+@import 'tags';
+
+.lm-icon {
+    display: inline-block;
+    @include mask();
+    // the icon size depends on its usage
+    // the icon color must be set by background-color property
+
+    &.add {
+        @include mask-image(url('../assets/_icons/add.svg'));
+    }
+}
+
+.lm-button {
+    @extend a;
+    @extend button;
+    @include cursor-hand();
+    @include border-radius(5px);
+    padding: 15px;
+
+    &.active {
+        color: $activeTextColor;
+        background-color: $activeBgColor;
+        text-transform: uppercase;
+        
+        &:hover, &:active, &:visited {
+            color: $activeTextColor;
+        }
+
+        .lm-icon {
+            background-color: $activeTextColor;
+        }
+    }
+
+    .lm-icon {
+        width: $buttonIconSize;
+        height: $buttonIconSize;
+        margin-right: 15px;
+    }
+}

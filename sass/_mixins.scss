@@ -1,0 +1,50 @@
+@mixin border-radius($values) {
+    -webkit-border-radius: $values;
+	   -moz-border-radius: $values;
+			border-radius: $values;
+}
+
+@mixin box-shadow($values) {
+    -webkit-box-shadow: $values;
+	   -moz-box-shadow: $values;
+			box-shadow: $values;
+}
+
+@mixin cursor-hand() {
+    cursor: pointer;
+    cursor: hand;
+}
+
+@mixin mask() {
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+
+@mixin mask-image($value) {
+    -webkit-mask-image: $value;
+    mask-image: $value;
+}
+
+@mixin filter-gradient($from, $to) {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{$from}', endColorstr='{$to}', GradientType=0 );
+};
+
+@mixin linear-gradient($bgImage, $from, $middle, $to) {
+    background: $from;
+    background-image: $bgImage;
+    background-image: $bgImage, -moz-linear-gradient(top, $from 0%, $middle 30%, $to 100%);
+    background-image: $bgImage, -webkit-gradient(left top, left bottom, color-stop(0%, $from), color-stop(30%, $middle), color-stop(100%, $to));
+    background-image: $bgImage, -webkit-linear-gradient(top, $from 0%, $middle 30%, $to 100%);
+    background-image: $bgImage, -o-linear-gradient(top, $from 0%, $middle 30%, $to 100%);
+    background-image: $bgImage, -ms-linear-gradient(top, $from 0%, $middle 30%, $to 100%);
+    background-image: $bgImage, linear-gradient(to bottom, $from 0%, $middle 30%, $to 100%);
+};
+
+@mixin logo($size) {
+    width: $size;
+    height: $size;
+    @include border-radius(5px);
+    @include box-shadow(1px 1px 10px rgba(0, 0, 0, 0.2));
+}
