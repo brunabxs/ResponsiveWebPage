@@ -182,43 +182,61 @@
         z-index: 10;
         background-color: $activeTextColor;
         padding: 20px;
-    }
 
-    .lm-access-or {
-        position: relative;
-        margin: 20px 0px;
-        padding-left: 170px;
-        font-size: 20px;
-        color: $secTextColor;
+        .lm-access-social-media {
+            display: table;
+            margin: 0px auto 10px auto;
 
-        &:before, &:after {
-            content: '';
-            position: absolute;
-            width: 165px;
-            height: 12px;
-            border-bottom: 3px solid #ccc;
+            .lm-access-or {
+                display: table-cell;
+                vertical-align: bottom;
+            }
+
+            .lm-button {
+                width: 160px;
+                display: table-cell;
+
+                &.googleplus, &.facebook {
+                    position: relative;
+                    margin-bottom: 45px;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 140px;
+                        height: 3px;
+                        background-color: #ccc;
+                        bottom: -40px;
+                    }
+                }
+
+                &.googleplus {
+                    &:after {
+                        right: 0;
+                    }
+                }
+                
+                &.facebook {
+                    &:after {
+                        left: 0;
+                    }
+                }
+            }
         }
 
-        &:before {
-            left: 0px;
-        }
-
-        &:after {
-            left: 195px;
-        }
-    }
-
-    .lm-access-other {
-        font-size: 20px;
-        color: $mainTextColor;
-        font-weight: normal;
-
-        a {
-            color: $activeBgColor;
+        .lm-access-other {
+            text-align: center;
+            font-size: 20px;
+            color: $mainTextColor;
             font-weight: normal;
 
-            &:hover, &:visited, &:active {
+            a {
                 color: $activeBgColor;
+                font-weight: normal;
+
+                &:hover, &:visited, &:active {
+                    color: $activeBgColor;
+                }
             }
         }
     }
