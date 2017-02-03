@@ -7,7 +7,8 @@ In this project you will find an example of a responsive web page.
 - [Normalize.css](https://github.com/necolas/normalize.css)
 - [SASS](http://sass-lang.com/)
 - [JQuery](https://jquery.com/) and [JQuery UI](http://jqueryui.com/)
-
+  - Using [JQuery UI Autocomplete](https://jqueryui.com/autocomplete/) to create the search feature.
+  - Using [JQuery UI Tabs](https://jqueryui.com/tabs/) to create the tabs used in access section.
 
 ## Development
 ### First steps
@@ -34,3 +35,7 @@ gulp deploy
 ### Running the application
 - Open deploy/index.html.
 
+## Fixes
+- Better usage of SVG images: mask-image does not work in many browsers.
+- The search input is not well positioned for mobile.
+- Create tests (Jasmine JS and Sinon JS).
