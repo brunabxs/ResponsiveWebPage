@@ -18,6 +18,10 @@
         @include mask-image(url('../assets/_icons/unlock.svg'));
     }
 
+    &.search {
+        @include mask-image(url('../assets/_icons/search.svg'));
+    }
+
     &.sort {
         @include mask-image(url('../assets/_icons/reorder.svg'));
     }
@@ -317,5 +321,42 @@
         @extend h3;
         color: $secTextColor;
         margin-bottom: 20px;
+    }
+}
+
+.ui-menu {
+    list-style: none;
+    float: left;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    max-width: 200px;
+    padding: 4px 0px;
+    margin: 2px 0 0 0;
+    background-color: #FFFFFF;
+    border: #ccc solid 1px;
+    @include border-radius(0px 0px 3px 3px);
+    @include box-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+    @include background-clip();
+
+    .ui-menu-item {
+        & > div {
+            display: block;
+            padding: 3px 15px;
+            clear: both;
+            color: $mainTextColor;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @include cursor-hand();
+
+            &:hover, &:active {
+                color: $activeTextColor;
+                text-decoration: none;
+                background-color: $activeBgColor;
+            }
+        }
     }
 }

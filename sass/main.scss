@@ -4,13 +4,30 @@
 @import 'helpers';
 
 #lm-main-header {
+    position: relative;
     background-color: $mainHeaderBgColor;
     padding: 10px 0px 10px 50px;
+    
+    #lm-main-logo {
+        height: $mainLogoSize;
+    }
+
+    #lm-search {
+        position: absolute;
+        top: 10px;
+        right: 50px;
+
+        input {
+            display: none;
+        }
+        
+        .lm-button {
+            padding: 0px;
+            background-color: $mainHeaderBgColor;
+        }
+    }
 }
 
-#lm-main-logo {
-    height: $mainLogoSize;
-}
 
 #lm-company-info {
     text-align: center;

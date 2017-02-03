@@ -21,3 +21,10 @@ button {
     border: none;
     @include cursor-hand();
 }
+
+input[type="text"] {
+    padding: 3px 5px;
+    color: $mainTextColor;
+    border: 1px solid #FFFFFF;
+    @include border-radius(2px);
+}

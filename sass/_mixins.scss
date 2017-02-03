@@ -10,6 +10,12 @@
 			box-shadow: $values;
 }
 
+@mixin background-clip() {
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
 @mixin cursor-hand() {
     cursor: pointer;
     cursor: hand;
